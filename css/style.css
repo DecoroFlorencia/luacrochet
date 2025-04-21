@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* -------- ESTRUCTURA PRINCIPAL -------- */
+body {
+  background-color: rgb(207, 191, 165);
+  font-family: "Indie Flower";
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* -------- TÍTULO -------- */
+title {
+  color: rgba(102, 52, 53, 0.973);
+  font-size: 50px;
+  margin: 30px;
+  text-align: center; 
+  text-decoration: none; 
+  font-family: "Indie Flower";
+  font-weight: 700;
+}
+
+/* -------- NAVEGACIÓN -------- */
+.contenedor {
+  display: flex;
+  justify-content: center;  
+  align-items: center;     
+  background-color: rgb(157, 176, 153);
+}
+
+nav {
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  padding: 0 20px;
+  height: 60px;
+  background-color:rgb(216, 161, 167);
+}
+
+nav a {
+  margin: 80px;
+}
+.nav-icon {
+  width: 20px;  
+  height: auto; 
+  margin-right: 8px; 
+  vertical-align: middle; 
+}
+a { 
+  color: #4b1032;
+  text-decoration: none; 
+  font-family: "Indie Flower";
+  font-size: 35px;
+  display: inline-block; 
+  text-align: center;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+
+  nav a {
+    margin: 10px 0; 
+  }
+}
+.texto-principal{
+  color: #4b1032;
+  text-decoration: none; 
+  font-family: "Indie Flower";
+  text-align: center;
+}
+/* -------- GALERÍA -------- */
+.galeria-polaroids
+ {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+  gap: 20px;
+  padding: 40px;
+  background-color: rgb(221, 204, 184);
+}
+
+@media (max-width: 768px) {
+  .galeria-polaroids {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+  }
+}
+
+.polaroid {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px 10px 20px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 200px;
+  font-family: 'Comic Neue', cursive;
+  color: #4b1032;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.polaroid:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.2); 
+}
+
+/* -------- GRID -------- */
+.grid-container {
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 5px; 
+  width: 100%; 
+  max-width: 1200px; 
+  margin: 20px auto; 
+}
+
+.grid-item {
+  background-color: rgb(221, 204, 184);
+  border: 3px solid #4b1032;
+  padding: 20px;
+  text-align: center;
+  font-family: "Indie Flower";
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* -------- CARRUSEL -------- */
+h1{ 
+   color: #4b1032;
+  text-decoration: none; 
+  font-family: "Indie Flower";
+  text-align: center;}
+
+#miCarrusel {
+  border: 4px solid #800020; /* Bordó oscuro */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* bordes redondeados */
+#miCarrusel .carousel-item img {
+  border-radius: 20px;
+  height: 300px;
+  object-fit: contain;
+}
+
+header {
+  background-color: rgb(247, 240, 229);
+}
+
+/* -------- BOTÓN -------- */
+.boton {
+  display: inline-block;
+  background-color: #d08396; 
+  color: rgb(95, 0, 29);
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 14px;
+  margin-top: 75px;
+  transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+  background-color: #cc385d;
+}
+
+/* -------- FOOTER -------- */
+footer {
+  background-color: rgb(157, 176, 153);
+  color: #4b1032;
+  font-family: 'Verdana', sans-serif;
+  padding: 0.5rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap; 
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-logo img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.footer-logo p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-social h4 {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0.6rem;
+  border-radius: 1.5rem;
+  background-color:rgb(210, 180, 190);
+  color: #4b1032;
+  font-size: 0.85rem;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0;
+}
+
+.social-icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 0.3rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.75rem;
+  margin-top: 1rem;
+  border-top: 1px solid #e0cfc2;
+  padding-top: 0.5rem;
+} 
+body {
+  background-color:  rgb(221, 204, 184); 
+}
