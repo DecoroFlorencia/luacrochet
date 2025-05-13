@@ -1,0 +1,33 @@
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(157, 176, 153);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  height: 60px;
+  background-color: rgb(216, 161, 167);
+}
+
+footer {
+  background-color: rgb(157, 176, 153);
+  color: $color-enlace;
+  font-family: 'Verdana', sans-serif;
+  padding: 0.5rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 1rem;
+}

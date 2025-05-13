@@ -1,0 +1,54 @@
+@mixin font($font-family, $font-size, $font-weight: normal) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+@mixin center-content($justify-content: center, $align-items: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin box-shadow($shadow-color: rgba(0, 0, 0, 0.2), $offset-x: 5px, $offset-y: 5px, $blur-radius: 15px) {
+  box-shadow: $offset-x $offset-y $blur-radius $shadow-color;
+}
+
+@mixin polaroid($width: 200px, $padding: 10px, $shadow-color: rgba(0, 0, 0, 0.2)) {
+  background: white;
+  border: 1px solid #ccc;
+  padding: $padding;
+  box-shadow: $shadow-color;
+  text-align: center;
+  width: $width;
+  font-family: 'Comic Neue', cursive;
+  color: #4b1032;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2); 
+  }
+}
+
+@mixin polaroid-img() {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+@mixin nav-style($bg-color: rgb(216, 161, 167), $height: 60px) {
+  background-color: $bg-color;
+  height: $height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin title-style($font-size: 50px, $font-weight: 700, $text-align: center) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  text-align: $text-align;
+  color: rgba(102, 52, 53, 0.973);
+  font-family: "Indie Flower", cursive;
+}

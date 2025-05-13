@@ -1,0 +1,30 @@
+.polaroid {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px 10px 20px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 200px;
+  font-family: 'Comic Neue', cursive;
+  color: $color-enlace;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boton {
+  display: inline-block;
+  background-color: $color-boton;
+  color: rgb(95, 0, 29);
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: $fuente-secundaria;
+  font-size: 14px;
+  margin-top: 75px;
+  transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+  background-color: $color-boton-hover;
+  transform: scale(1.2);
+}
