@@ -1,54 +1,100 @@
-@mixin font($font-family, $font-size, $font-weight: normal) {
+//  Mixin de Tipografía
+@mixin font($font-family, $font-size, $font-weight: normal, $color: inherit) {
   font-family: $font-family;
   font-size: $font-size;
   font-weight: $font-weight;
+  color: $color;
 }
 
-@mixin center-content($justify-content: center, $align-items: center) {
+// Mixin para Centrar Contenido (Flexbox)
+@mixin center-content($justify-content: center, $align-items: center, $direction: row) {
   display: flex;
   justify-content: $justify-content;
   align-items: $align-items;
+  flex-direction: $direction;
 }
 
-@mixin box-shadow($shadow-color: rgba(0, 0, 0, 0.2), $offset-x: 5px, $offset-y: 5px, $blur-radius: 15px) {
-  box-shadow: $offset-x $offset-y $blur-radius $shadow-color;
+// 📌 Mixin para Sombras
+@mixin box-shadow(
+  $shadow-color: rgba(0, 0, 0, 0.2), 
+  $offset-x: 5px, 
+  $offset-y: 5px, 
+  $blur-radius: 15px, 
+  $spread-radius: 0
+) {
+  box-shadow: $offset-x $offset-y $blur-radius $spread-radius $shadow-color;
 }
 
-@mixin polaroid($width: 200px, $padding: 10px, $shadow-color: rgba(0, 0, 0, 0.2)) {
+//  Mixin para Polaroid 
+@mixin polaroid(
+  $width: 200px, 
+  $padding: 10px, 
+  $shadow-color: rgba(0, 0, 0, 0.2)
+) {
   background: white;
   border: 1px solid #ccc;
   padding: $padding;
-  box-shadow: $shadow-color;
+  box-shadow: 0 0 15px $shadow-color;
   text-align: center;
   width: $width;
   font-family: 'Comic Neue', cursive;
   color: #4b1032;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
   &:hover {
     transform: scale(1.05);
-    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2); 
+    box-shadow: 4px 4px 12px $shadow-color; 
   }
 }
 
-@mixin polaroid-img() {
+// Mixin para Imágenes en Polaroid
+@mixin polaroid-img($radius: 4px) {
   width: 100%;
   height: auto;
-  border-radius: 4px;
+  border-radius: $radius;
 }
 
-@mixin nav-style($bg-color: rgb(216, 161, 167), $height: 60px) {
+// Mixin para Navegación
+@mixin nav-style(
+  $bg-color: rgb(216, 161, 167), 
+  $height: 60px, 
+  $text-color: #fff, 
+  $padding: 0 20px
+) {
   background-color: $bg-color;
   height: $height;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  color: $text-color;
+  padding: $padding;
 }
 
-@mixin title-style($font-size: 50px, $font-weight: 700, $text-align: center) {
+//  Mixin para Títulos
+@mixin title-style(
+  $font-size: 50px, 
+  $font-weight: 700, 
+  $text-align: center, 
+  $color: rgba(102, 52, 53, 0.973)
+) {
   font-size: $font-size;
   font-weight: $font-weight;
   text-align: $text-align;
-  color: rgba(102, 52, 53, 0.973);
+  color: $color;
   font-family: "Indie Flower", cursive;
 }
+
+// Mixin para Estilos Responsivos
+@mixin responsive($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+  
+    @media (max-width: 767px) {
+      .playlist-container iframe {
+        width: 100% !important;
+        height: 380px !important;
+      }
+    }

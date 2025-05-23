@@ -1,103 +1,146 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- CSS personalizado -->
-    <link rel="stylesheet" href="./css/style.css">
-    
+    <link rel="stylesheet" href="./css/style.css" />
+
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet" />
+
     <title>Lua Crochet</title>
 </head>
 
 <body>
-    <header class="header">
-        <!--hml-->
-        <div class="contenedor">
-            <img src="./assets/Titulo.jpg" width="400px" height="auto">
-        </div>
-        <hr style="width: 100%; height: 6px; background-color: #f3d8c4; border: none; margin: 0px auto; display: block;">
-        <nav>
-            <a href="index.html" class="boton">
-                <img src="./assets/ball-icon.png" alt="Inicio" class="nav-icon"> <strong>Inicio</strong>
-            </a>
-            <a href="./paginas/Patrones-crochet.html" class="boton">
-                <img src="./assets/ball-icon.png" alt="Patrones Crochet" class="nav-icon"> <strong>Patrones Crochet</strong>
-            </a>
-            <a href="./paginas/puntos-crochet.html" class="boton">
-                <img src="./assets/ball-icon.png" alt="Puntos de Crochet" class="nav-icon"> <strong>Puntos de crochet</strong>
-            </a> 
-            <a href="./paginas/contacto.html" class="boton">
-                <img src="./assets/ball-icon.png" alt="Contacto" class="nav-icon"> <strong>Contacto</strong>
-            </a>
-        </nav>
-        <hr style="width: 100%; height: 6px; background-color: #f3d8c4; border: none; margin: 0px auto;">
-    </header>
-            <div class="texto-principal">
-             <h1><strong><br> Bienvenidos a mi página de crochet</strong></h1>
-             <p><strong>Acá comparto mis creaciones, hechas a mano con mucha paciencia,<br>
-                         lana lindas y la compañía fiel de Luna,<br>
-                         mi gata inspectora de tejidos ♡<br></strong></p>
-            </div>
+<header class="header">
+  <div class="titulo-barra">
+    <img src="./assets/Titulo.jpg" alt="Titulo de la página" class="titulo-img" />
+  </div>
+<!--navegacion-->
+  <nav class="navegacion">
+    <a href="index.html" class="boton">
+      <img src="./assets/ball-icon.png" alt="Inicio" class="nav-icon" /> <strong>Inicio</strong>
+    </a>
+    <a href="./paginas/Patrones-crochet.html" class="boton">
+      <img src="./assets/ball-icon.png" alt="Patrones Crochet" class="nav-icon" /> <strong>Patrones Crochet</strong>
+    </a>
+    <a href="./paginas/puntos-crochet.html" class="boton">
+      <img src="./assets/ball-icon.png" alt="Puntos de Crochet" class="nav-icon" /> <strong>Puntos de crochet</strong>
+    </a>
+     <a href="./paginas/Sobre-mi.html" class="boton">
+      <img src="./assets/ball-icon.png" alt="Sobre mi" class="nav-icon" /> <strong>Sobre mi</strong>
+    </a>
+    <a href="./paginas/contacto.html" class="boton">
+      <img src="./assets/ball-icon.png" alt="Contacto" class="nav-icon" /> <strong>Contacto</strong>
+    </a>
+  </nav>
+</header>
+<!--texto-->
+<div class="texto-principal" style="background-color: #fff6f0; padding: 2rem; border-radius: 12px; margin: 2rem auto; max-width: 800px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+  <h1 style="font-size: 2rem; font-weight: bold; font-family: 'Indie Flower', cursive; color: #b87f6d; margin-bottom: 1rem;">
+    Bienvenidos a mi página de crochet
+  </h1>
+  <p style="font-size: 1.2rem; font-family: var(--fuente-secundaria); color: #333;">
+    Acá comparto mis creaciones, hechas a mano con mucha paciencia,<br />
+    lanas lindas y la compañía fiel de Luna,<br />
+    mi gata inspectora de tejidos ♡
+  </p>
+</div>
+
 <!--Galeria polaroids-->
-    <section class="galeria-polaroids">
-        <div class="polaroid">
-            <img src="./assets/perry.png" alt="Perry el ornitorrinco">
-            <p>Perry el ornitorrinco</p>
-        </div>
-        <div class="polaroid">
-            <img src="./assets/pinguino.png" alt="Llavero de pinguino">
-            <p>Llavero de pinguino</p>
-        </div>
-        <div class="polaroid">
-            <img src="./assets/coneja de apego.jpg" alt="Coneja de apego">
-            <p>Coneja de apego</p>
-        </div>
-        <div class="polaroid">
-            <img src="./assets/Señalador tacita de cafe.jpg" alt="Señalador de libros">
-            <p>Señalador de libros</p>
-        </div>
-        <div class="polaroid">
-            <img src="./assets/Oso polar.png" alt="Oso polar">
-            <p>Oso polar</p>
-        </div>
-        <div class="polaroid">
-            <img src="./assets/pollito.jpg" alt="Pollito">
-            <p>Pollito</p>
-        </div>
-    </section>
-    <hr style="width: 100%; height: 6px; background-color: #f3d8c4; border: none; margin: 0px auto;">
-    <!--footer-->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src="./assets/luna.png">
-                <p>Hecho con amor por Flor y Luna</p>
-            </div>
+<section class="galeria-polaroids">
+  <div class="polaroid">
+    <img src="./assets/perry.png" alt="Perry el ornitorrinco" />
+    <p>Perry el ornitorrinco</p>
+  </div>
+  <div class="polaroid">
+    <img src="./assets/pinguino.png" alt="Llavero de pinguino" />
+    <p>Llavero de pinguino</p>
+  </div>
+  <div class="polaroid">
+    <img src="./assets/coneja de apego.jpg" alt="Coneja de apego" />
+    <p>Coneja de apego</p>
+  </div>
+  <div class="polaroid">
+    <img src="./assets/Señalador tacita de cafe.jpg" alt="Señalador de libros" />
+    <p>Señalador de libros</p>
+  </div>
+  <div class="polaroid">
+    <img src="./assets/Oso polar.png" alt="Oso polar" />
+    <p>Oso polar</p>
+  </div>
+  <div class="polaroid">
+    <img src="./assets/pollito.jpg" alt="Pollito" />
+    <p>Pollito</p>
+  </div>
+</section>
+<!--votacion-->
+<section class="d-flex align-items-start justify-content-center gap-4 flex-wrap" style="margin: 2rem auto; max-width: 900px;">
+  <img src="./assets/kitty.png" class="kitty-icon flotando" alt="Gatita votando"
+     style="width: 70px; height: auto; box-shadow: none; align-self: center; margin-top: 1rem;" />
+      
+  <div class="votacion" style="padding: 1rem; text-align: left; box-shadow: none;">
+    <h2 style="color: var(--color-texto); font-family: 'Indie Flower', cursive; margin-bottom: 1rem;">¿Cuál es tu tejido favorito?</h2>
+    <form id="voto-form" style="font-family: var(--fuente-secundaria); color: var(--color-texto); font-size: 1.1rem;">
+      <label><input type="radio" name="tejido" value="Coneja de apego" /> Coneja de apego</label><br />
+      <label><input type="radio" name="tejido" value="Llavero pingüino" /> Llavero pingüino</label><br />
+      <label><input type="radio" name="tejido" value="Perry el ornitorrinco" /> Perry el ornitorrinco</label><br />
+      <label><input type="radio" name="tejido" value="Señalador de libros" /> Señalador de libros</label><br />
+      <label><input type="radio" name="tejido" value="Oso polar" /> Oso polar</label><br />
+      <label><input type="radio" name="tejido" value="Pollito" /> Pollito</label><br /><br />
+      <button type="submit" style="background-color: var(--color-boton); border-radius: var(--borde-boton); border: none; padding: 0.5rem 1rem; cursor: pointer; font-weight: bold; font-family: var(--fuente-secundaria); font-size: 1rem; color: var(--color-texto); transition: background-color 0.3s ease;">Votar</button>
+    </form>
+    <p id="resultado-voto" style="margin-top: 1rem; font-family: 'Indie Flower', cursive;"></p>
+  </div>
+</section>
+<!-- Línea divisoria -->
+<hr style="width: 100%; height: 6px; background-color: #f3d8c4; border: none; margin: 0px auto;" />
 
-            <div class="footer-social">
-                <h4>Seguime en:</h4>
-                <a href="https://www.instagram.com/luaa.crochet/" target="_blank">
-                    <img src="./assets/instagram-icon.png" alt="Instagram" class="social-icon">
-                    Instagram
-                </a>
-            </div>
-        </div>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-        <div class="footer-bottom">
-            <p>&copy; 2025 Lua Crochet. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+<script>
+  const form = document.getElementById('voto-form');
+  const resultado = document.getElementById('resultado-voto');
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const votoSeleccionado = form.tejido.value;
+    if (!votoSeleccionado) {
+      resultado.textContent = 'Por favor, seleccioná una opción antes de votar.';
+      resultado.style.color = 'red';
+      return;
+    }
+    resultado.textContent = `¡Gracias por votar por "${votoSeleccionado}"! ♡`;
+    resultado.style.color = 'green';
+    form.reset();
+  });
+</script>
+
+<!--footer-->
+<footer style="padding: 1rem 2rem; background-color: #f8f8f8; border-top: 1px solid #ddd; font-family: 'Indie Flower', cursive;">
+  <div class="footer-container" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem;">
+    
+    <div class="footer-social" style="display: flex; align-items: center; gap: 0.5rem; font-size: 1.1rem; color: #333;">
+      <img src="./assets/kitty-contacto.png" alt="Kitty" style="width: 36px; height: auto; object-fit: contain; filter: none;">
+      <a href="https://www.instagram.com/luaa.crochet/" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+        <img src="./assets/instagram-icon.png" alt="Instagram" class="social-icon" style="width: 24px; height: 24px;">
+        <span style="margin-left: 0.3rem;">Seguime en Instagram</span>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom" style="text-align: center; font-size: 0.9rem; color: #777; margin-top: 0.8rem; font-family: Arial, sans-serif;">
+    <p>&copy; 2025 Lua Crochet. Todos los derechos reservados.</p>
+  </div>
+</footer>
 </body>
 </html>

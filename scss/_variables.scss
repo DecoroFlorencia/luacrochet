@@ -1,29 +1,3 @@
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  height: 100%;
-  background-color: $color-fondo;
-  font-family: $fuente-principal;
-  display: flex;
-  flex-direction: column;
-}
-
-body {
-  font-size: 16px;
-}
-
-h1 {
-  font-size: 50px;
-  margin: 30px;
-  text-align: center;
-  font-family: $fuente-principal;
-  font-weight: 700;
-}
-
 // Variables de colores
 $color-fondo: rgb(207, 191, 165);
 $color-texto: #4b1032;
@@ -34,20 +8,18 @@ $color-boton: #d08396;
 $color-boton-hover: #cc385d;
 $color-enlace: #3498db;
 
-$background-color:rgb(207,191,165);
-
-
 // Variables de fuentes
 $fuente-principal: "Indie Flower", cursive;
 $fuente-secundaria: 'Comic Neue', cursive;
 $fuente-footer: 'Verdana', sans-serif;
 
 // Variables de tamaños
-$tamano-titulo: 50px;
+$tamano-titulo: 30px;
 $tamano-texto: 18px;
 $tamano-nav: 35px;
 $tamano-boton: 14px;
 $tamano-footer: 0.9rem;
+$tamano-base-fuente: 16px;
 
 // Variables de bordes
 $borde-polaroid: 8px;
@@ -57,3 +29,63 @@ $borde-boton: 20px;
 // Variables de sombras
 $sombra-polaroid: 5px 5px 15px rgba(0, 0, 0, 0.2);
 $sombra-boton-hover: 4px 4px 12px rgba(0, 0, 0, 0.2);
+
+// Estilos globales
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: $fuente-principal;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-fondo;
+}
+
+body {
+  font-size: $tamano-base-fuente;
+}
+
+h1 {
+  font-size: $tamano-titulo;
+  margin: 30px;
+  text-align: center;
+  font-family: $fuente-principal;
+  font-weight: 700;
+}
+
+// Estilos para las imágenes
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: $borde-polaroid;
+  box-shadow: $sombra-polaroid;
+}
+
+// Estilos para las polaroids
+.polaroid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.polaroid-container img {
+  max-width: 300px;
+}
+
+// Estilos para el icono
+.icono {
+  max-width: 50px;
+  height: auto;
+}
+
+// Estilos para la imagen del footer
+footer img {
+  max-width: 150px;
+  height: auto;
+}
