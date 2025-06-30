@@ -1,21 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- CSS personalizado -->
-    <link rel="stylesheet" href="./css/style.css" />
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="./css/style.css" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet" />
 
-    <title>Lua Crochet</title>
+  <title>Lua Crochet</title>
+
+  <style>
+    /* Estilos para polaroids con descripción hover */
+    .galeria-polaroids {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .polaroid {
+      position: relative;
+      width: 150px;
+      cursor: pointer;
+      font-family: 'Indie Flower', cursive;
+      text-align: center;
+    }
+
+    .polaroid img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .descripcion-producto {
+      position: absolute;
+      bottom: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140px;
+      background: #fff6f0;
+      border-radius: 6px;
+      padding: 0.4rem 0.6rem;
+      font-size: 0.85rem;
+      color: #b87f6d;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 10;
+      text-align: center;
+    }
+
+    .polaroid:hover .descripcion-producto {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Estilo para resultados y mensajes */
+    #resultado-voto, #resultado-compra {
+      font-family: 'Indie Flower', cursive;
+      margin-top: 1rem;
+    }
+
+    #contador-votos {
+      font-family: 'Indie Flower', cursive;
+      color: #b87f6d;
+      margin-top: 1rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -23,7 +82,7 @@
   <div class="titulo-barra">
     <img src="./assets/Titulo.jpg" alt="Titulo de la página" class="titulo-img" />
   </div>
-<!--navegacion-->
+  <!--navegacion-->
   <nav class="navegacion">
     <a href="index.html" class="boton">
       <img src="./assets/ball-icon.png" alt="Inicio" class="nav-icon" /> <strong>Inicio</strong>
@@ -42,6 +101,7 @@
     </a>
   </nav>
 </header>
+
 <!--texto-->
 <div class="texto-principal" style="background-color: #fff6f0; padding: 2rem; border-radius: 12px; margin: 2rem auto; max-width: 800px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
   <h1 style="font-size: 2rem; font-weight: bold; font-family: 'Indie Flower', cursive; color: #b87f6d; margin-bottom: 1rem;">
@@ -54,34 +114,41 @@
   </p>
 </div>
 
-<!--Galeria polaroids-->
+<!--Galeria polaroids con datos para descripción-->
 <section class="galeria-polaroids">
-  <div class="polaroid">
+  <div class="polaroid" data-nombre="Perry el ornitorrinco" data-precio="4500" data-color="Verde agua">
     <img src="./assets/perry.png" alt="Perry el ornitorrinco" />
     <p>Perry el ornitorrinco</p>
+    <div class="descripcion-producto"></div>
   </div>
-  <div class="polaroid">
-    <img src="./assets/pinguino.png" alt="Llavero de pinguino" />
-    <p>Llavero de pinguino</p>
+  <div class="polaroid" data-nombre="Llavero pingüino" data-precio="3200" data-color="Negro y blanco">
+    <img src="./assets/pinguino.png" alt="Llavero pingüino" />
+    <p>Llavero pingüino</p>
+    <div class="descripcion-producto"></div>
   </div>
-  <div class="polaroid">
+  <div class="polaroid" data-nombre="Coneja de apego" data-precio="6200" data-color="Lila pastel">
     <img src="./assets/coneja de apego.jpg" alt="Coneja de apego" />
     <p>Coneja de apego</p>
+    <div class="descripcion-producto"></div>
   </div>
-  <div class="polaroid">
+  <div class="polaroid" data-nombre="Señalador de libros" data-precio="2800" data-color="Marrón y beige">
     <img src="./assets/Señalador tacita de cafe.jpg" alt="Señalador de libros" />
     <p>Señalador de libros</p>
+    <div class="descripcion-producto"></div>
   </div>
-  <div class="polaroid">
+  <div class="polaroid" data-nombre="Oso polar" data-precio="4000" data-color="Blanco">
     <img src="./assets/Oso polar.png" alt="Oso polar" />
     <p>Oso polar</p>
+    <div class="descripcion-producto"></div>
   </div>
-  <div class="polaroid">
+  <div class="polaroid" data-nombre="Pollito" data-precio="3500" data-color="Lila">
     <img src="./assets/pollito.jpg" alt="Pollito" />
     <p>Pollito</p>
+    <div class="descripcion-producto"></div>
   </div>
 </section>
-<!--votacion-->
+
+<!--votacion y contador votos-->
 <section class="d-flex align-items-start justify-content-center gap-4 flex-wrap" style="margin: 2rem auto; max-width: 900px;">
   <img src="./assets/kitty.png" class="kitty-icon flotando" alt="Gatita votando"
      style="width: 70px; height: auto; box-shadow: none; align-self: center; margin-top: 1rem;" />
@@ -97,50 +164,134 @@
       <label><input type="radio" name="tejido" value="Pollito" /> Pollito</label><br /><br />
       <button type="submit" style="background-color: var(--color-boton); border-radius: var(--borde-boton); border: none; padding: 0.5rem 1rem; cursor: pointer; font-weight: bold; font-family: var(--fuente-secundaria); font-size: 1rem; color: var(--color-texto); transition: background-color 0.3s ease;">Votar</button>
     </form>
-    <p id="resultado-voto" style="margin-top: 1rem; font-family: 'Indie Flower', cursive;"></p>
+    <p id="resultado-voto"></p>
+    <div id="contador-votos"></div>
   </div>
 </section>
-<!-- Línea divisoria -->
-<hr style="width: 100%; height: 6px; background-color: #f3d8c4; border: none; margin: 0px auto;" />
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Formulario de compra -->
+<section style="margin: 2rem auto; max-width: 400px; padding: 1rem; border-radius: 12px; background-color: #fff6f0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); font-family: 'Indie Flower', cursive;">
+  <h2 style="margin-bottom: 1rem; color: #b87f6d;">Calcular precio de compra</h2>
+  <form id="compra-form">
+    <label for="producto" style="font-weight: bold;">Tejido:</label><br />
+    <select id="producto" required style="width: 100%; padding: 0.4rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid #b87f6d;">
+      <option value="">Seleccioná uno</option>
+      <option value="Coneja de apego">Coneja de apego</option>
+      <option value="Llavero pingüino">Llavero pingüino</option>
+      <option value="Perry el ornitorrinco">Perry el ornitorrinco</option>
+      <option value="Señalador de libros">Señalador de libros</option>
+      <option value="Oso polar">Oso polar</option>
+      <option value="Pollito">Pollito</option>
+    </select>
+
+    <label for="cantidad" style="font-weight: bold;">Cantidad:</label><br />
+    <input type="number" id="cantidad" min="1" required style="width: 100%; padding: 0.4rem; border-radius: 6px; border: 1px solid #b87f6d; margin-bottom: 1rem;" />
+
+    <button type="submit" style="background-color: #b87f6d; border-radius: 12px; border: none; padding: 0.6rem 1rem; cursor: pointer; font-weight: bold; color: #fff;">Calcular</button>
+  </form>
+  <p id="resultado-compra"></p>
+</section>
+
+<!-- Footer -->
+<footer class="footer" style="text-align: center; padding: 1rem; font-family: var(--fuente-secundaria); color: var(--color-texto); font-size: 0.9rem;">
+  <p>© 2025 Lua Crochet. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Script js externo -->
+<script src="./js/funciones.js"></script>
 
 <script>
-  const form = document.getElementById('voto-form');
-  const resultado = document.getElementById('resultado-voto');
+  document.addEventListener("DOMContentLoaded", () => {
+    // Mostrar nombre, precio y color en cada tarjeta de producto
+    const polaroids = document.querySelectorAll('.polaroid');
+    polaroids.forEach(polaroid => {
+      const nombre = polaroid.getAttribute('data-nombre');
+      const precio = polaroid.getAttribute('data-precio');
+      const color = polaroid.getAttribute('data-color');
 
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    const votoSeleccionado = form.tejido.value;
-    if (!votoSeleccionado) {
-      resultado.textContent = 'Por favor, seleccioná una opción antes de votar.';
-      resultado.style.color = 'red';
-      return;
+      const descripcionDiv = polaroid.querySelector('.descripcion-producto');
+      descripcionDiv.innerHTML = `
+        <strong>${nombre}</strong><br>
+        Precio: $${precio}<br>
+        Color: ${color}
+      `;
+    });
+
+    // Votacion
+    const form = document.getElementById('voto-form');
+    const resultado = document.getElementById('resultado-voto');
+    const contadorVotosDiv = document.getElementById('contador-votos');
+
+    // Recuperar votos guardados o iniciar
+    const votosGuardados = localStorage.getItem("votos");
+    const votos = votosGuardados ? JSON.parse(votosGuardados) : {
+      "Coneja de apego": 0,
+      "Llavero pingüino": 0,
+      "Perry el ornitorrinco": 0,
+      "Señalador de libros": 0,
+      "Oso polar": 0,
+      "Pollito": 0,
+    };
+
+    function actualizarContador() {
+      let texto = "<strong>Conteo de votos:</strong><br>";
+      for (const tejido in votos) {
+        texto += `${tejido}: ${votos[tejido]}<br>`;
+      }
+      contadorVotosDiv.innerHTML = texto;
     }
-    resultado.textContent = `¡Gracias por votar por "${votoSeleccionado}"! ♡`;
-    resultado.style.color = 'green';
-    form.reset();
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      const votoSeleccionado = form.tejido.value;
+      if (!votoSeleccionado) {
+        resultado.textContent = 'Por favor, seleccioná una opción antes de votar.';
+        resultado.style.color = 'red';
+        return;
+      }
+
+      votos[votoSeleccionado]++;
+      localStorage.setItem("votos", JSON.stringify(votos));
+
+      resultado.textContent = `¡Gracias por votar por "${votoSeleccionado}"! ♡`;
+      resultado.style.color = 'green';
+      actualizarContador();
+      form.reset();
+    });
+
+    actualizarContador();
+
+    // Compra
+    const compraForm = document.getElementById('compra-form');
+    const resultadoCompra = document.getElementById('resultado-compra');
+
+    const precios = {
+      "Coneja de apego": 6200,
+      "Llavero pingüino": 3200,
+      "Perry el ornitorrinco": 4500,
+      "Señalador de libros": 2800,
+      "Oso polar": 4000,
+      "Pollito": 3500,
+    };
+
+    compraForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const producto = document.getElementById('producto').value;
+      const cantidad = parseInt(document.getElementById('cantidad').value);
+
+      if (!producto || isNaN(cantidad) || cantidad <= 0) {
+        resultadoCompra.textContent = "Por favor completá los datos correctamente.";
+        resultadoCompra.style.color = "red";
+        return;
+      }
+
+      const precioTotal = precios[producto] * cantidad;
+      resultadoCompra.innerHTML = `Total a pagar por <strong>${cantidad}</strong> "${producto}" es <strong>$${precioTotal}</strong>. ¡Gracias por elegir Lua Crochet! ♡`;
+      resultadoCompra.style.color = "green";
+
+      compraForm.reset();
+    });
   });
 </script>
-
-<!--footer-->
-<footer style="padding: 1rem 2rem; background-color: #f8f8f8; border-top: 1px solid #ddd; font-family: 'Indie Flower', cursive;">
-  <div class="footer-container" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem;">
-    
-    <div class="footer-social" style="display: flex; align-items: center; gap: 0.5rem; font-size: 1.1rem; color: #333;">
-      <img src="./assets/kitty-contacto.png" alt="Kitty" style="width: 36px; height: auto; object-fit: contain; filter: none;">
-      <a href="https://www.instagram.com/luaa.crochet/" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
-        <img src="./assets/instagram-icon.png" alt="Instagram" class="social-icon" style="width: 24px; height: 24px;">
-        <span style="margin-left: 0.3rem;">Seguime en Instagram</span>
-      </a>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom" style="text-align: center; font-size: 0.9rem; color: #777; margin-top: 0.8rem; font-family: Arial, sans-serif;">
-    <p>&copy; 2025 Lua Crochet. Todos los derechos reservados.</p>
-  </div>
-</footer>
 </body>
 </html>
