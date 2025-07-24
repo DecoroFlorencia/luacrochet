@@ -74,6 +74,58 @@
       color: #b87f6d;
       margin-top: 1rem;
     }
+
+    /* Estilo para info de envío y pagos */
+    #info-envio {
+      margin: 2rem auto;
+      max-width: 400px;
+      font-family: 'Indie Flower', cursive;
+      color: #b87f6d;
+      background-color: #fff6f0;
+      border: 2px solid #b87f6d;
+      padding: 1.2rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(184, 127, 109, 0.3);
+      text-align: center;
+    }
+    #info-envio p {
+      margin-bottom: 0.8rem;
+      font-size: 1rem;
+    }
+    #info-envio .btn-pago {
+      background-color: #b87f6d;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 0.4rem 0.6rem;
+      transition: background-color 0.3s ease;
+      font-family: 'Indie Flower', cursive;
+      font-size: 1.1rem;
+      display: inline-block;
+      text-decoration: none;
+    }
+    #info-envio .btn-pago:hover {
+      background-color: #a36a5a;
+    }
+    #btn-wsp {
+      background-color: #25D366;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 1rem;
+      font-family: 'Indie Flower', cursive;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+    #btn-wsp:hover {
+      background-color: #1ebe5a;
+    }
   </style>
 </head>
 
@@ -82,27 +134,15 @@
   <div class="titulo-barra">
     <img src="./assets/Titulo.jpg" alt="Titulo de la página" class="titulo-img" />
   </div>
-  <!--navegacion-->
   <nav class="navegacion">
-    <a href="index.html" class="boton">
-      <img src="./assets/ball-icon.png" alt="Inicio" class="nav-icon" /> <strong>Inicio</strong>
-    </a>
-    <a href="./pages/Patrones-crochet.html" class="boton">
-      <img src="./assets/ball-icon.png" alt="Patrones Crochet" class="nav-icon" /> <strong>Patrones Crochet</strong>
-    </a>
-    <a href="./pages/puntos-crochet.html" class="boton">
-      <img src="./assets/ball-icon.png" alt="Puntos de Crochet" class="nav-icon" /> <strong>Puntos de crochet</strong>
-    </a>
-     <a href="./pages/Sobre-mi.html" class="boton">
-      <img src="./assets/ball-icon.png" alt="Sobre mi" class="nav-icon" /> <strong>Sobre mi</strong>
-    </a>
-    <a href="./pages/contacto.html" class="boton">
-      <img src="./assets/ball-icon.png" alt="Contacto" class="nav-icon" /> <strong>Contacto</strong>
-    </a>
+    <a href="index.html" class="boton"><img src="./assets/ball-icon.png" alt="Inicio" class="nav-icon" /> <strong>Inicio</strong></a>
+    <a href="./pages/Patrones-crochet.html" class="boton"><img src="./assets/ball-icon.png" alt="Patrones Crochet" class="nav-icon" /> <strong>Patrones Crochet</strong></a>
+    <a href="./pages/puntos-crochet.html" class="boton"><img src="./assets/ball-icon.png" alt="Puntos de Crochet" class="nav-icon" /> <strong>Puntos de crochet</strong></a>
+    <a href="./pages/Sobre-mi.html" class="boton"><img src="./assets/ball-icon.png" alt="Sobre mi" class="nav-icon" /> <strong>Sobre mi</strong></a>
+    <a href="./pages/contacto.html" class="boton"><img src="./assets/ball-icon.png" alt="Contacto" class="nav-icon" /> <strong>Contacto</strong></a>
   </nav>
 </header>
 
-<!--texto-->
 <div class="texto-principal" style="background-color: #fff6f0; padding: 2rem; border-radius: 12px; margin: 2rem auto; max-width: 800px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
   <h1 style="font-size: 2rem; font-weight: bold; font-family: 'Indie Flower', cursive; color: #b87f6d; margin-bottom: 1rem;">
     Bienvenidos a mi página de crochet
@@ -114,7 +154,6 @@
   </p>
 </div>
 
-<!--Galeria polaroids con datos para descripción-->
 <section class="galeria-polaroids">
   <div class="polaroid" data-nombre="Perry el ornitorrinco" data-precio="4500" data-color="Verde agua">
     <img src="./assets/perry.png" alt="Perry el ornitorrinco" />
@@ -148,11 +187,9 @@
   </div>
 </section>
 
-<!--votacion y contador votos-->
 <section class="d-flex align-items-start justify-content-center gap-4 flex-wrap" style="margin: 2rem auto; max-width: 900px;">
   <img src="./assets/kitty.png" class="kitty-icon flotando" alt="Gatita votando"
-     style="width: 70px; height: auto; box-shadow: none; align-self: center; margin-top: 1rem;" />
-      
+       style="width: 70px; height: auto; box-shadow: none; align-self: center; margin-top: 1rem;" />
   <div class="votacion" style="padding: 1rem; text-align: left; box-shadow: none;">
     <h2 style="color: var(--color-texto); font-family: 'Indie Flower', cursive; margin-bottom: 1rem;">¿Cuál es tu tejido favorito?</h2>
     <form id="voto-form" style="font-family: var(--fuente-secundaria); color: var(--color-texto); font-size: 1.1rem;">
@@ -162,19 +199,18 @@
       <label><input type="radio" name="tejido" value="Señalador de libros" /> Señalador de libros</label><br />
       <label><input type="radio" name="tejido" value="Oso polar" /> Oso polar</label><br />
       <label><input type="radio" name="tejido" value="Pollito" /> Pollito</label><br /><br />
-      <button type="submit" style="background-color: var(--color-boton); border-radius: var(--borde-boton); border: none; padding: 0.5rem 1rem; cursor: pointer; font-weight: bold; font-family: var(--fuente-secundaria); font-size: 1rem; color: var(--color-texto); transition: background-color 0.3s ease;">Votar</button>
+      <button type="submit">Votar</button>
     </form>
     <p id="resultado-voto"></p>
     <div id="contador-votos"></div>
   </div>
 </section>
 
-<!-- Formulario de compra -->
 <section style="margin: 2rem auto; max-width: 400px; padding: 1rem; border-radius: 12px; background-color: #fff6f0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); font-family: 'Indie Flower', cursive;">
   <h2 style="margin-bottom: 1rem; color: #b87f6d;">Calcular precio de compra</h2>
   <form id="compra-form">
-    <label for="producto" style="font-weight: bold;">Tejido:</label><br />
-    <select id="producto" required style="width: 100%; padding: 0.4rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid #b87f6d;">
+    <label for="producto">Tejido:</label><br />
+    <select id="producto" required>
       <option value="">Seleccioná uno</option>
       <option value="Coneja de apego">Coneja de apego</option>
       <option value="Llavero pingüino">Llavero pingüino</option>
@@ -182,116 +218,202 @@
       <option value="Señalador de libros">Señalador de libros</option>
       <option value="Oso polar">Oso polar</option>
       <option value="Pollito">Pollito</option>
-    </select>
+    </select><br />
 
-    <label for="cantidad" style="font-weight: bold;">Cantidad:</label><br />
-    <input type="number" id="cantidad" min="1" required style="width: 100%; padding: 0.4rem; border-radius: 6px; border: 1px solid #b87f6d; margin-bottom: 1rem;" />
+    <label for="cantidad">Cantidad:</label><br />
+    <input type="number" id="cantidad" min="1" required /><br /><br />
 
-    <button type="submit" style="background-color: #b87f6d; border-radius: 12px; border: none; padding: 0.6rem 1rem; cursor: pointer; font-weight: bold; color: #fff;">Calcular</button>
+    <button type="submit">Agregar al carrito</button>
   </form>
   <p id="resultado-compra"></p>
 </section>
 
-<!-- Footer -->
-<footer class="footer" style="text-align: center; padding: 1rem; font-family: var(--fuente-secundaria); color: var(--color-texto); font-size: 0.9rem;">
-  <p>© 2025 Lua Crochet. Todos los derechos reservados.</p>
-</footer>
+<div id="info-envio">
+  <p><strong>Tiempo estimado de entrega:</strong> 10 a 15 días hábiles.</p>
+  <p>Una vez enviado tu pedido, recibirás un número de seguimiento para rastrearlo.</p>
+  <p><strong>Formas de pago:</strong></p>
+  <a href="https://link.mercadopago.com.ar/luacrochet" target="_blank" class="btn-pago">Pagar con MercadoPago</a>
+  <!--No agregue el link de tarjeta por privacidad-->
+  <a href="TU_LINK_TARJETA" target="_blank" class="btn-pago">Pagar con Tarjeta</a> 
+  <br />
+  <button id="btn-wsp">Enviar pedido por WhatsApp</button>
+</div>
 
-<!-- Script js externo -->
-<script src="./js/funciones.js"></script>
+<section id="carrito" style="margin: 2rem auto; max-width: 500px; font-family: 'Indie Flower', cursive; background: #fff6f0; padding: 1rem; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+  <h2 style="color: #b87f6d;">Tu carrito de compra</h2>
+  <ul id="lista-carrito"></ul>
+  <p id="total-carrito"><strong>Total:</strong> $0</p>
+  <button id="finalizar-compra" style="background-color: #25D366; color: white; border: none; padding: 0.6rem 1rem; border-radius: 12px; cursor: pointer; font-weight: bold;">Finalizar compra por WhatsApp</button>
+</section>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    // Mostrar nombre, precio y color en cada tarjeta de producto
-    const polaroids = document.querySelectorAll('.polaroid');
-    polaroids.forEach(polaroid => {
-      const nombre = polaroid.getAttribute('data-nombre');
-      const precio = polaroid.getAttribute('data-precio');
-      const color = polaroid.getAttribute('data-color');
+document.addEventListener("DOMContentLoaded", () => {
+  // Mostrar descripción en polaroids
+  const polaroids = document.querySelectorAll('.polaroid');
+  polaroids.forEach(polaroid => {
+    const nombre = polaroid.getAttribute('data-nombre');
+    const precio = polaroid.getAttribute('data-precio');
+    const color = polaroid.getAttribute('data-color');
+    const descripcionDiv = polaroid.querySelector('.descripcion-producto');
+    descripcionDiv.innerHTML = `<strong>${nombre}</strong><br>Precio: $${precio}<br>Color: ${color}`;
+  });
 
-      const descripcionDiv = polaroid.querySelector('.descripcion-producto');
-      descripcionDiv.innerHTML = `
-        <strong>${nombre}</strong><br>
-        Precio: $${precio}<br>
-        Color: ${color}
-      `;
+  // Votación
+  const formVoto = document.getElementById('voto-form');
+  const resultadoVoto = document.getElementById('resultado-voto');
+  const contadorVotosDiv = document.getElementById('contador-votos');
+
+  const votosGuardados = localStorage.getItem("votos");
+  const votos = votosGuardados ? JSON.parse(votosGuardados) : {
+    "Coneja de apego": 0,
+    "Llavero pingüino": 0,
+    "Perry el ornitorrinco": 0,
+    "Señalador de libros": 0,
+    "Oso polar": 0,
+    "Pollito": 0,
+  };
+
+  function actualizarContador() {
+    let texto = "<strong>Conteo de votos:</strong><br>";
+    for (const tejido in votos) {
+      texto += `${tejido}: ${votos[tejido]}<br>`;
+    }
+    contadorVotosDiv.innerHTML = texto;
+  }
+
+  formVoto.addEventListener('submit', e => {
+    e.preventDefault();
+    const votoSeleccionado = formVoto.tejido.value;
+    if (!votoSeleccionado) {
+      resultadoVoto.textContent = 'Por favor, seleccioná una opción antes de votar.';
+      resultadoVoto.style.color = 'red';
+      return;
+    }
+    votos[votoSeleccionado]++;
+    localStorage.setItem("votos", JSON.stringify(votos));
+    resultadoVoto.textContent = `¡Gracias por votar por "${votoSeleccionado}"! ♡`;
+    resultadoVoto.style.color = 'green';
+    actualizarContador();
+    formVoto.reset();
+  });
+
+  actualizarContador();
+
+  // Carrito de compra
+  const carrito = [];
+  const precios = {
+    "Coneja de apego": 6200,
+    "Llavero pingüino": 3200,
+    "Perry el ornitorrinco": 4500,
+    "Señalador de libros": 2800,
+    "Oso polar": 4000,
+    "Pollito": 3500,
+  };
+
+  const compraForm = document.getElementById('compra-form');
+  const resultadoCompra = document.getElementById('resultado-compra');
+  const listaCarrito = document.getElementById('lista-carrito');
+  const totalCarritoP = document.getElementById('total-carrito');
+  const btnFinalizar = document.getElementById('finalizar-compra');
+
+  function actualizarCarrito() {
+    listaCarrito.innerHTML = "";
+    let total = 0;
+
+    carrito.forEach((item, index) => {
+      const itemTotal = precios[item.producto] * item.cantidad;
+      total += itemTotal;
+
+      const li = document.createElement('li');
+      li.textContent = `${item.cantidad} x ${item.producto} = $${itemTotal}`;
+
+      const btnEliminar = document.createElement('button');
+      btnEliminar.textContent = "Eliminar";
+      btnEliminar.style.marginLeft = "10px";
+      btnEliminar.onclick = () => {
+        carrito.splice(index, 1);
+        actualizarCarrito();
+      };
+
+      li.appendChild(btnEliminar);
+      listaCarrito.appendChild(li);
     });
 
-    // Votacion
-    const form = document.getElementById('voto-form');
-    const resultado = document.getElementById('resultado-voto');
-    const contadorVotosDiv = document.getElementById('contador-votos');
+    totalCarritoP.innerHTML = `<strong>Total:</strong> $${total}`;
+  }
 
-    // Recuperar votos guardados o iniciar
-    const votosGuardados = localStorage.getItem("votos");
-    const votos = votosGuardados ? JSON.parse(votosGuardados) : {
-      "Coneja de apego": 0,
-      "Llavero pingüino": 0,
-      "Perry el ornitorrinco": 0,
-      "Señalador de libros": 0,
-      "Oso polar": 0,
-      "Pollito": 0,
-    };
+  compraForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const producto = document.getElementById('producto').value;
+    const cantidad = parseInt(document.getElementById('cantidad').value);
 
-    function actualizarContador() {
-      let texto = "<strong>Conteo de votos:</strong><br>";
-      for (const tejido in votos) {
-        texto += `${tejido}: ${votos[tejido]}<br>`;
-      }
-      contadorVotosDiv.innerHTML = texto;
+    if (!producto || isNaN(cantidad) || cantidad <= 0) {
+      resultadoCompra.textContent = "Por favor completá los datos correctamente.";
+      resultadoCompra.style.color = "red";
+      return;
     }
 
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      const votoSeleccionado = form.tejido.value;
-      if (!votoSeleccionado) {
-        resultado.textContent = 'Por favor, seleccioná una opción antes de votar.';
-        resultado.style.color = 'red';
-        return;
-      }
+    carrito.push({ producto, cantidad });
+    actualizarCarrito();
 
-      votos[votoSeleccionado]++;
-      localStorage.setItem("votos", JSON.stringify(votos));
+    resultadoCompra.textContent = `Agregaste ${cantidad} x "${producto}" al carrito.`;
+    resultadoCompra.style.color = "green";
 
-      resultado.textContent = `¡Gracias por votar por "${votoSeleccionado}"! ♡`;
-      resultado.style.color = 'green';
-      actualizarContador();
-      form.reset();
-    });
-
-    actualizarContador();
-
-    // Compra
-    const compraForm = document.getElementById('compra-form');
-    const resultadoCompra = document.getElementById('resultado-compra');
-
-    const precios = {
-      "Coneja de apego": 6200,
-      "Llavero pingüino": 3200,
-      "Perry el ornitorrinco": 4500,
-      "Señalador de libros": 2800,
-      "Oso polar": 4000,
-      "Pollito": 3500,
-    };
-
-    compraForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const producto = document.getElementById('producto').value;
-      const cantidad = parseInt(document.getElementById('cantidad').value);
-
-      if (!producto || isNaN(cantidad) || cantidad <= 0) {
-        resultadoCompra.textContent = "Por favor completá los datos correctamente.";
-        resultadoCompra.style.color = "red";
-        return;
-      }
-
-      const precioTotal = precios[producto] * cantidad;
-      resultadoCompra.innerHTML = `Total a pagar por <strong>${cantidad}</strong> "${producto}" es <strong>$${precioTotal}</strong>. ¡Gracias por elegir Lua Crochet! ♡`;
-      resultadoCompra.style.color = "green";
-
-      compraForm.reset();
-    });
+    compraForm.reset();
   });
+
+  btnFinalizar.addEventListener('click', () => {
+    if (carrito.length === 0) {
+      alert("Tu carrito está vacío.");
+      return;
+    }
+
+    let mensaje = "Hola! Quisiera hacer un pedido:\n";
+    carrito.forEach(item => {
+      mensaje += `- ${item.cantidad} x ${item.producto}\n`;
+    });
+
+    const telefono = '5491123889783'; 
+    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+  });
+
+  // Botón de WhatsApp en info-envio 
+  const btnWspInfo = document.getElementById('btn-wsp');
+  btnWspInfo.addEventListener('click', () => {
+    if (carrito.length === 0) {
+      alert("Tu carrito está vacío.");
+      return;
+    }
+
+    let mensaje = "Hola! Quisiera hacer un pedido:\n";
+    carrito.forEach(item => {
+      mensaje += `- ${item.cantidad} x ${item.producto}\n`;
+    });
+
+    const telefono = '5491123889783'; 
+    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+  });
+});
 </script>
+<!--footer-->
+<footer style="padding: 1rem 2rem; background-color: #f8f8f8; border-top: 1px solid #ddd; font-family: 'Indie Flower', cursive;">
+  <div class="footer-container" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem;">
+    
+    <div class="footer-social" style="display: flex; align-items: center; gap: 0.5rem; font-size: 1.1rem; color: #333;">
+      <img src="../assets/kitty-contacto.png" alt="Kitty" style="width: 36px; height: auto; object-fit: contain; filter: none;">
+      <a href="https://www.instagram.com/luaa.crochet/" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+        <img src="../assets/instagram-icon.png" alt="Instagram" class="social-icon" style="width: 24px; height: 24px;">
+        <span style="margin-left: 0.3rem;">Seguime en Instagram</span>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom" style="text-align: center; font-size: 0.9rem; color: #777; margin-top: 0.8rem; font-family: Arial, sans-serif;">
+    <p>&copy; 2025 Lua Crochet. Todos los derechos reservados.</p>
+  </div>
+</footer>
 </body>
 </html>
